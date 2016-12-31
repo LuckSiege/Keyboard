@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6F6"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/widget_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#ffffff"
+                android:gravity="top"
+                android:hint="说点什么吧~"
+                android:padding="8dp"
+                android:textColor="#53575e"
+                android:textColorHighlight="#9b9b9b"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:background="#eeeeee" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fafafa"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享到"
+                android:textColor="#9b9b9b"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/pyq_sel_1x" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/qzone_def_1x" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/weibo_def_1x" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#eeeeee" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#f6f6f6"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:background="#fafafa"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享到"
+                android:textColor="#9b9b9b"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/pyq_sel_1x" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/qzone_def_1x" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/weibo_def_1x" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#eeeeee" />
+
+        <LinearLayout
+            android:id="@+id/ll_emoji"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/emoji"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@mipmap/biaoqin_1x" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#eeeeee" />
+
+        <LinearLayout
+            android:id="@+id/ll_photo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/picture"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@mipmap/xiangce_1x" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 表情图片 -->
+
+    <LinearLayout
+        android:id="@+id/ll_face_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_keyboard_height"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee" />
+
+        <RadioGroup
+            android:id="@+id/rabs"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rab1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/emoji_confirm"
+                android:button="@null"
+                android:gravity="center"
+                android:text="最近"
+                android:textColor="@color/selector_check_tab_color"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ABABAB" />
+
+            <RadioButton
+                android:id="@+id/rab2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/emoji_confirm"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="默认"
+                android:textColor="@color/selector_check_tab_color"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ABABAB"
+                android:visibility="invisible" />
+
+            <RadioButton
+                android:id="@+id/rab3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/emoji_confirm"
+                android:button="@null"
+                android:gravity="center"
+                android:text="emoji"
+                android:textColor="#ffffff"
+                android:textSize="13sp"
+                android:visibility="invisible" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>
